@@ -39,10 +39,10 @@ class Home extends Component {
         return(
             <div className="App">
               <h2>Starships</h2>
-              <ul>
+              <div>
                   {this.state.starships.map((starship, index) =>
-                    <li key={starship.name}>
-                        <Link
+                        <Link id="starship-link"
+                        key={starship.name}
                         to={{
                             pathname: '/starship',
                             state: starship
@@ -50,10 +50,8 @@ class Home extends Component {
                         >
                         {starship.name}
                         </Link>
-
-                    </li>
                   )}
-              </ul>
+              </div>
           </div>
         )
     }

@@ -5,18 +5,14 @@ import Home from './components/Home'
 import StarshipDetails from './components/StarshipDetails'
 
 class App extends Component {
-  constructor() {
-    super()
-
-    
-  }
-
   render() {
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/starships" component={StarshipDetails} />
+          <Route path="/starship" render={({location}) =>
+            <StarshipDetails location={location}/>
+        } />
         </Switch>
       </BrowserRouter>
     );

@@ -7,10 +7,11 @@ class StarshipDetails extends Component {
 
     render() {
         // const shipDetails = this.props.ship
-
+        // console.log(this.props.location);
         return(
             <div>
-                <h2>{this.props.starship.name}</h2>
+                <h2>{this.props.location.state.name}</h2>
+                <h4>{this.props.location.state.model}</h4>
             </div>
         )
     }
