@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios'; 
 import { Link } from 'react-router-dom';
+import '../home.css';
 
 class Home extends Component {
     constructor() {
@@ -38,8 +39,8 @@ class Home extends Component {
     render() {
         return(
             <div className="App">
-              <h2>Starships</h2>
-              <div>
+              <h2 id="header">Starships</h2>
+              <div id="starships">
                   {this.state.starships.map((starship, index) =>
                         <Link id="starship-link"
                         key={starship.name}
